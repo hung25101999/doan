@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+.member{
+	clear:both;
+	margin-top:50px;
+	width:65%;
+	
+
+}
+.hinh{
+float:left;
+width:40%;
+padding:10px;
+}
+.noidung{
+width:50%;
+float:left;
+font-size:25px;
+text-align:center;
+padding-top:30px ;
+}
+.hinh a:link{
+	text-decoration:none;
+}
+.hinh a:visited{
+	color:#000;
+}
+.noidung a:link{
+	text-decoration:none;
+}
+.noidung a:visited{
+	color:#000;
+}
+.noidung a:active{
+	color:#F00;
+}
+

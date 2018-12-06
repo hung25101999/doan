@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.imgleft{
+	padding-top: 20px;
+    width: 64px;
+    height: 64px;
+}
+#hinh_sp{
+    float:left; 
+    width:400px;
+    text-align:center;
+}
+#ten_sp{
+    font-size:35px;
+    font-style:italic;
+}
+#gia_sp{
+    font-size:30px;
+    color: red;
+}
+#mua_ngay{
+    background-color:#C00; 
+    color:#FFF; 
+    text-align:center; 
+    height:45px; width:150px;
+	text-decoration:none;
+}
+#gio_hang{
+    background:#FFF; 
+    color:red; 
+    height:45px; 
+    width:250px; 
+    border: 1px solid red;
+	text-decoration:none;
+}
+#div-chitietsp_khuyenmai{
+    clear:both; 
+    padding-top: 20px; 
+    padding-bottom: 50px;
+}
+#cauhinhchitiet{
+    background-color:#999;
+    font-size:20px;
+    height:50px;
+    text-align:center;
+    width: 550px;
+}
+#khuyenmaihapdan{
+    padding-left: 10px;
+    width: 350px;
+    font-size:20px;
+    height:50px;
+    text-align:center;
+    border: 2px solid black;
+    color: red;
+}
+.ten_thongso{
+	width:150px; float:left;
+    height: 30px;
+}
+.cacthongso_sp{
+	float:left;
+    width: 400px;
+}
+#nd_khuyenmai{
+    padding-left: 30px; border: 2px solid black; border-top: none;
+}
+#hienthidangnhap a:link{text-decoration:none;color:red;}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+.khung {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  margin-right:20px;
+
+  font-size:18px;
+  padding: 9px;
+  color: #676767;
+ 
+}
+#dau{
+	margin-top:50px;
+	font-size:40px;
+	color:#FFF;
+}
+body
+{
+	background: url(../images/Dangkivadangnhap4.png);	
+}
+.nutdn {
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  color: #63532d;
+  font-size:20px;
+  line-height: 29px;
+  border: 1px solid #cba957;
+  margin-top:45px;
+}
+.forgetpassword{
+	float:left;
+	font-size:20px;
+	clear:both;
+	padding-left:600px;
+	margin-top:50px;
+	
+}
+.forgetpassword a:link{
+	text-decoration:none;
+}
+.forgetpassword a:visited{
+	color:#00F;
+}
+.dangnhap{
+	float:right;
+	padding-right:620px;
+	
+}
+input:valid{
+	outline: 3px solid blue;
+
+}
+input:focus:invalid{
+	outline: 3px solid red;
+}

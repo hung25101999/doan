@@ -1,0 +1,22 @@
+@charset "utf-8";
+.dieuhuong{
+  position: absolute;
+  color: #666;
+  font-size: 40px;
+  top: 60%;
+  padding-left: 10px;
+  left:40%;
+  
+}
+.dieuhuong i:last-child{
+  position: relative;
+  left: 550px;
+ 
+  
+}
+
+.chuyendong img{
+  width: 500px;
+  height: 400px;
+  
+}

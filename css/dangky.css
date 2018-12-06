@@ -1,0 +1,70 @@
+
+.canle {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-right:420px;
+  padding-right:200px;
+  float:right;
+  clear:both;
+  font-size:22px;
+  color:#FFF;
+  };
+label { 
+  display: block;
+  float: left;
+  margin-top: 12px;
+  width: 200px;  
+  text-align:left;
+}
+#dau{
+	margin:20px 0px;
+	color:#FFF;
+	font-size:40px;
+	padding-right:20px;
+}
+body
+{
+	background:url(../images/Dangkivadangnhap4.png);
+		
+}
+.khung {
+  width: 300px;
+  border: 2px solid #dcdcdc;
+  border-radius:3px;
+  font-size:18px;
+  padding: 9px;
+  color: #676767;
+}
+.nutdk {
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  color: #63532d;
+  font-size:20px;
+  line-height: 29px;
+  border: 1px solid #cba957;
+}
+.submitandreset
+{
+	 margin-bottom: 15px;
+ 	 margin-top: 15px;
+  	margin-right:420px;
+	float:right;
+  	clear:both;
+	margin:20px;
+	padding-right:650px;
+	display: block;
+}
+input:valid{
+	outline: 3px solid green;
+
+}
+input:focus:invalid{
+	outline: 3px solid red;
+}
+
+
+
+
+	
