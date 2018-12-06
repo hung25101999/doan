@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" style="text/css" href="css/dangky.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Đăng ký</title>
+</head>
+<script> 
+	function kt ()
+	{
+		if(localStorage.numberuser)
+		{
+			localStorage.numberuser = parseInt(localStorage.numberuser)+1;
+		}
+		else
+		{
+			localStorage.numberuser = 1;
+		}
+		var test = document.getElementsByName("dk");
+			
+			var i;
+ 			for(i=0;i<=9;i++)
+				if( test[0].value.indexOf(i)!=-1)
+				{
+				alert("Vui lòng nhập đúng thông tin.");
+				test[0].focus(); return 0;
+				}
+			if(test[0].value == "" )
+			{
+				alert("Vui lòng nhập đầy đủ thông tin.");
+				test[0].focus(); return 0;
+			} 	
+			if(test[1].value == "" )
+			{
+				alert("Vui lòng nhập đầy đủ thông tin.");
+				test[1].focus(); return 0;
+			} 	
+			if(test[2].value == "" )
+			{
+				alert("Vui lòng nhập đầy đủ thông tin.");
+				test[2].focus(); return 0;
+			} 			
+		 	if(test[2].value.length < 5 || test[2].value.length>16)
+			{
+				 alert("Mật khẩu có độ dài 5-16 ký tự"); test[2].focus(); 			return 0;
+			}
+			if(test[2].value != test[3].value)
+			{
+				 alert("Gõ lại mật khẩu không đúng."); test[3].focus(); return 0;
+			}
+			if(test[4].value == "" )
+			{
+				alert("Vui lòng nhập đầy đủ thông tin.");
+				test[4].focus(); return 0;
+			} 	
+			if( isNaN (test[4].value))
+			{
+				alert("SDT nhập không đúng."); test[4].focus(); return 0;
+			}
+			if(test[5].value == "" )
+			{
+				alert("Vui lòng nhập đầy đủ thông tin.");
+				test[5].focus(); return 0;
+			} 
+			if(test[1]!="")
+			{
+				for(var i = 1 ; i <= parseInt(localStorage.numberuser) ; i++)
+				{
+				
+				tamtk = "tendangnhap"+i;
+				tammk = "matkhau"+i;
+				if((test[1].value == localStorage.getItem(tamtk)))
+				{
+					
+					alert("tài khoản đã có người sủ dụng");
+					test[1].focus();
+					return ;					
+				}
+				}
+			}
+			
+				alert("Đăng kí thành công. Mời bạn đăng nhập!");
+				var tendangnhap = "tendangnhap"+localStorage.numberuser;
+				var matkhau = "matkhau"+localStorage.numberuser;
+				var hoten = "hoten"+localStorage.numberuser;
+				var email = "email"+localStorage.numberuser;
+				var sdt = "sdt"+localStorage.numberuser;
+				
+				localStorage.setItem(tendangnhap,test[1].value);
+				localStorage.setItem(matkhau,test[2].value);
+				localStorage.setItem(hoten,test[0].value);
+				localStorage.setItem(email,test[5].value);
+				localStorage.setItem(sdt,test[4].value);
+				document.location.assign("index.html");
+				return 1;
+			
+			
+			
+	}
+</script>
+<body>
+<form method="post" name="form" action="../dangnhap.html" >
+	<div align="center" width="1500px" >
+    	  <div id="dau"><b>ĐĂNG KÝ TÀI KHOẢN</b></div>
+    	  <div class="canle">
+   		  <label for="name">Họ và tên</label>
+          <input type="text" name="dk" id="name" class="khung" required="required"/>
+          </div>
+          <div class="canle">
+          <label for="user">Tài khoản</label>
+          <input type="text" name="dk" id="user" class="khung" required="required">
+          </div>       
+          <div class="canle">
+          	<label for="pass1">Mật khẩu</label>
+            <input type="password" name="dk" id="pass1" class="khung" placeholder="Mật khẩu dài 5-16 ký tự" required="required" />
+          </div>
+          <div class="canle">
+          	<label for="pass2">Nhập lại mật khẩu</label>
+            <input type="password" name="dk" id="pass2" class="khung" required="required"/>
+          </div>
+          <div class="canle">
+          	<label for="sdt">Số điện thoại</label>
+         	 <input type="text" name="dk" id="sdt" class="khung" required="required">
+          </div>
+          <div class="canle">
+         	 <label for="email">Email</label>
+          	<input type="email" name="dk" id="email" class="khung" required="required">
+          </div>
+          <div class="submitandreset"><input type="button" value="Đăng ký" onclick="kt()" class="nutdk" />
+          					  <input type="reset" value="Reset"  class="nutdk"/> </div>
+                           
+    </div>
+    </form>
+</body>
+</html>

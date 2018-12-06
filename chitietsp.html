@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Chi Tiết Sản Phẩm</title>
+    <script src="js/xuatdanhsachsanpham.js" > </script>
+    <script src="js/xuatkhachhang.js"></script>
+    <link href="css/chitietsanpham.css" rel="stylesheet" type="text/css" />
+<!--<style>
+.lienket1 a:link{
+	text-decoration:none;
+	color:#000;
+	
+}
+.imgleft{
+	padding-top: 20px;
+    width: 64px;
+    height: 64px;
+}
+#hinh_sp{
+    float:left; 
+    width:400px;
+    text-align:center;
+}
+#ten_sp{
+    font-size:35px;
+    font-style:italic;
+}
+#gia_sp{
+    font-size:30px;
+    color: red;
+}
+#mua_ngay{
+    background-color:#C00; 
+    color:#FFF; 
+    text-align:center; 
+    height:45px; width:150px;
+}
+#gio_hang{
+    background:#FFF; 
+    color:red; 
+    height:45px; 
+    width:250px; 
+    border: 1px solid red;
+}
+#div-chitietsp_khuyenmai{
+    clear:both; 
+    padding-top: 20px; 
+    padding-left: 50px; 
+    padding-bottom: 50px;
+}
+#cauhinhchitiet{
+    background-color:#999;
+    font-size:20px;
+    height:50px;
+    text-align:center;
+    width: 550px;
+}
+#khuyenmaihapdan{
+    padding-left: 10px;
+    width: 350px;
+    font-size:20px;
+    height:50px;
+    text-align:center;
+}
+.ten_thongso{
+	width:150px; float:left;
+    height: 30px;
+}
+.cacthongso_sp{
+	float:left;
+    height: 30px;
+}
+</style> !-->   
+</head>
+
+<body>
+<div style="float: right;" class="lienket1"> 
+	<div id="hienthidangnhap">
+    
+    <a href="dangky.html" style="float:left; padding:20px;width:150px; text-decoration: none;"><img src="images/Dangkivadangnhap.png"/><strong> Đăng Kí</strong> </a>
+    <a href="dangnhap.html" style="float:left; padding:20px;width:150px; text-decoration: none;" ><img src="images/Dangkivadangnhap.png" ><strong> Đăng Nhập</strong> </a>
+    
+    </div>
+    
+    
+    <div style="float:left; padding:20px;width:200px;text-decoration: none;"><a href="giohang.html"><img src="images/Giohang.png"/><strong> Giỏ Hàng</strong></a></div>
+    
+    
+</div>
+<div style="padding-left: 200px; padding-right: 200px;">
+	<div> 
+		<div style="width:70px; float:left;"> 
+			<div class="imgleft" id="hinh_sp1" onclick="thaydoihinh(1)">  </div>
+		 	<div class="imgleft" id="hinh_sp2" onclick="thaydoihinh(2)">  </div>
+            <div class="imgleft" id="hinh_sp3" onclick="thaydoihinh(3)">  </div>
+			<img src="images/3cham.jpg" class="imgleft" onclick="thaydoihinh(0)"/>
+		</div>
+		<div id="hinh_sp">  </div>
+		<div style="float:left; width:550px"> 
+			<p id="ten_sp"> </p>
+			<p id="gia_sp"> gia </p>
+  			<hr/>
+            <p>Khuyến mãi: &nbsp;&nbsp;&nbsp;&nbsp;Thanh toán trực tuyến để nhận được nhiều ưu đãi </p>
+            <hr/>
+  			<p> Vận chuyển: &nbsp;&nbsp;&nbsp;&nbsp; <img src="images/freeship.jpg" width="36" height="32"/> Miễn phí vận chuyển</p>
+  			<hr/>
+  			<button id="mua_ngay"> <b> Mua Ngay </b> </button>
+  			<button id="gio_hang" onclick="kt_dangnhap()"> <b>Đưa vào giỏ hàng </b></button> 
+		</div>
+	</div>
+
+	<div id="div-chitietsp_khuyenmai" > 
+		<table >
+        	<tr > 
+            	<td id="cauhinhchitiet"> <b> CẤU HÌNH CHI TIẾT </b></td>
+            	<td id="khuyenmaihapdan"> KHUYẾN MÃI HẤP DẪN </td>
+            </tr>
+            <tr> 
+            	<td>
+                    <div class="ten_thongso">Thời gian bảo hành: </div>  <div id="baohanh" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Thương hiệu: </div>   <div id="thuonghieu" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Màn hình: </div>  <div id="monitor" class="cacthongso_sp"> </div> 
+                    <hr style="clear:both;"/>                 
+                    <div class="ten_thongso"> CPU: </div>  <div id="cpu" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>           
+                    <div class="ten_thongso">RAM: </div>  <div id="ram" class="cacthongso_sp"> </div> 
+                    <hr style="clear:both;"/>          
+                    <div class="ten_thongso">Chip đồ họa: </div>  <div id="graphics" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Cổng kết nối: </div> <div id="cong" class="cacthongso_sp"> </div>   
+                    <hr style="clear:both;"/>         
+                    <div class="ten_thongso">Lưu trữ: </div> <div id="harddisk" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Kết nối không dây: </div> <div class="cacthongso_sp">WiFi 802.11ac, Bluetooth 5.0 </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Bàn phím: </div>   <div id="phim" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Hệ điều hành: </div>    <div id="os" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Pin: </div>   <div id="pin" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                    <div class="ten_thongso">Khối lượng: </div>   <div id="kl" class="cacthongso_sp"> </div>
+                    <hr style="clear:both;"/>
+                </td>
+                <td style="padding-left: 30px;" id="nd_khuyenmai"> 
+                    <b>Quà tặng kèm khi mua sản phẩm:</b>
+                    <ul>
+                    <li>1 Miếng lót chuột Kingmaster Q6 (từ 01/11/2018 đến hết 30/12/2018).</li>
+                    <li>1 Chuột máy tính Logitech M331 (Đỏ) (từ 01/11/2018 đến hết 30/12/2018).</li>  
+                    <li>1 Túi đựng laptop.</li> 
+                    </ul>
+                </td>
+            </tr>
+        </table>
+	</div>
+<script>
+window.onload = function()
+{			
+	hienthitaikhoan();
+	chitiet();			
+};
+</script>
+</div>
+</body>
+</html> 
+			

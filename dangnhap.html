@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Đăng nhập</title>
+<link rel="stylesheet" style="text/css" href="css/dangnhap.css" />
+</head>
+<script>
+function kt()
+{
+	var tk=document.getElementById("user");
+	var mk=document.getElementById("pass");
+	var tkad='admin';
+	var mkad='admin';
+	if(tk.value=="")
+	{
+		alert("Ban chua nhap tai khoan");
+		tk.focus();
+		return ;
+	}
+	else
+	if(mk.value=="")
+	{
+		alert("Ban chua nhap mat khau");
+		mk.focus();
+		return ;
+	}
+	else
+	if((tk.value == tkad) && (mk.value == mkad))
+	{
+		alert("Đăng nhập tài khoản admin thành công");
+		localStorage.taikhoanhientai = tkad;
+		localStorage.matkhauhientai = mkad;
+		location.assign("admin/admin.html");
+		return;
+		
+		
+	}
+	else
+	 {
+		 var tamtk;
+		 var tammk;
+		 
+		 	for(var i = 1 ; i <= parseInt(localStorage.numberuser) ; i++)
+			{
+				
+				tamtk = "tendangnhap"+i;
+				tammk = "matkhau"+i;
+				if((tk.value == localStorage.getItem(tamtk)) && (mk.value == localStorage.getItem(tammk)))
+				{
+					window.alert("Thành công.");
+					localStorage.taikhoanhientai = localStorage.getItem(tamtk);
+					localStorage.matkhauhientai = localStorage.getItem(tammk);
+					history.back();
+					
+					return ;					
+				}
+			}
+		
+			
+			window.alert("tài khoản hoặc mật khẩu không chính xác");	
+			return;		
+	 }
+	
+}
+
+</script>
+
+<body >
+<form method="post" action=""  >
+	<div align="center">
+      <div id="dau" >CHÀO MỪNG BẠN ĐẾN VỚI ITS</div>
+     
+      <div>
+          <div> <input type="text" name="user" id="user" class="khung" placeholder="Tài khoản" style="margin-top:50px" required="required"/><br /></div>
+          <div><input type="password" name="pass" id="pass" class="khung" placeholder="Mật khẩu"  style="margin-top:50px" required="required"/><br /></div>
+          <div>
+         	<div class="forgetpassword"> <a href="dangky.html" >Tạo tài khoản mới</a></div>
+          	<div class="dangnhap"><input type="submit" name="dn" id="dn" value="Đăng Nhập" class="nutdn" onclick="event.preventDefault();kt()" required="required"/></div>
+          </div>
+      <div>
+    
+  </div>
+</form>
+</body>
+</html>
